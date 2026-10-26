@@ -1,0 +1,221 @@
+/* ==========================================
+   1. Basic Global Styles
+   ========================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #333333;
+    line-height: 1.6;
+}
+
+/* ==========================================
+   2. Header & Navigation Bar
+   ========================================== */
+header {
+    background-color: #1a1a2e;
+    color: #ffffff;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #e94560;
+}
+
+/* ==========================================
+   3. Main Content & Sections
+   ========================================== */
+main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+section {
+    background: #ffffff;
+    margin-bottom: 2rem;
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+    font-size: 2rem;
+    color: #1a1a2e;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #e94560;
+    padding-bottom: 0.5rment;
+    display: inline-block;
+}
+
+/* About Me Section */
+#about-me p {
+    font-size: 1.1rem;
+    color: #555555;
+}
+
+/* Projects Section (Card Layout) */
+#projects article {
+    display: flex;
+    flex-direction: column;
+    background: #fdfdfd;
+    border: 1px solid #e1e1e1;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-top: 1.5rem;
+}
+
+#projects figure {
+    margin: 0;
+}
+
+#projects img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    display: block;
+}
+
+#projects figcaption {
+    padding: 1rem;
+    font-weight: bold;
+    background: #f1f1f1;
+}
+
+#projects article p {
+    padding: 1rem;
+    color: #666;
+}
+
+/* Skills Section (Styled with pseudo-classes) */
+#skills ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+#skills li {
+    background: #f0f4f8;
+    padding: 0.8rem 1rem;
+    border-radius: 4px;
+    font-weight: 500;
+    position: relative;
+    padding-left: 2rem;
+}
+
+#skills li::before {
+    content: "✔️";
+    position: absolute;
+    left: 0.8rem;
+    color: #007bff;
+}
+
+/* Contact Form Section */
+#contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-top: 1rem;
+}
+
+#contact label {
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+    display: block;
+}
+
+#contact input,
+#contact textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    /* Cross-browser vendor prefixes */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+#contact button {
+    background-color: #007bff;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: flex-start;
+}
+
+#contact button:hover {
+    background-color: #0056b3;
+}
+
+/* ==========================================
+   4. Footer
+   ========================================== */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #1a1a2e;
+    color: #ffffff;
+    margin-top: 3rem;
+}
+
+/* ==========================================
+   5. Responsive Design (Media Queries)
+   ========================================== */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    main {
+        padding: 0 1rem;
+    }
+
+    section {
+        padding: 1.5rem;
+    }
+}
