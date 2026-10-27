@@ -3,16 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A professional developer portfolio showcasing projects, skills, and contact information.">
+    <meta name="description" content="Portfolio of Soumya Samarth, a Computer Science student and aspiring web developer: projects, skills and contact form.">
     <title>Soumya Samarth | Developer Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
     <!-- Header & Navigation -->
     <header>
         <nav role="navigation" aria-label="Main Navigation">
-            <ul>
+            <a class="brand" href="#top">Soumya Samarth</a>
+            <ul id="nav-menu">
                 <li><a href="#about-me">About Me</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
@@ -21,53 +24,92 @@
         </nav>
     </header>
 
-    <main>
+    <main id="main-content">
+
+        <!-- Hero / Intro -->
+        <section id="top" class="hero">
+            <h1>Hi, I'm Soumya Samarth</h1>
+            <p class="tagline">Computer Science student building clean, fast and accessible websites.</p>
+            <a class="btn" href="#projects">View my projects</a>
+        </section>
+
         <!-- About Me Section -->
         <section id="about-me">
             <h2>About Me</h2>
             <p>Hello! I am a Computer Science student and aspiring software developer passionate about building clean, efficient, and user-friendly web applications.</p>
+            <p>I enjoy turning ideas into working interfaces, and I am currently focused on semantic HTML, responsive CSS and modern JavaScript.</p>
         </section>
 
         <!-- Projects Section -->
         <section id="projects">
             <h2>Projects</h2>
-            <article>
-                <figure>
-                    <img src="placeholder.jpg" alt="Screenshot of a web development project interface">
-                    <figcaption>Project One: Responsive Web Dashboard</figcaption>
-                </figure>
-                <p>A dynamic web dashboard built using modern HTML, CSS, and JavaScript to track project metrics.</p>
-            </article>
+            <div class="project-grid">
+
+                <article>
+                    <figure>
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 220'%3E%3Crect width='400' height='220' fill='%231a1a2e'/%3E%3Crect x='24' y='24' width='110' height='172' rx='6' fill='%23e94560'/%3E%3Crect x='150' y='24' width='226' height='76' rx='6' fill='%23ffffff' opacity='.85'/%3E%3Crect x='150' y='120' width='106' height='76' rx='6' fill='%23ffffff' opacity='.6'/%3E%3Crect x='270' y='120' width='106' height='76' rx='6' fill='%23ffffff' opacity='.4'/%3E%3C/svg%3E"
+                             alt="Illustration of a dashboard layout with a sidebar and three panels" width="400" height="220" loading="lazy">
+                        <figcaption>Responsive Web Dashboard</figcaption>
+                    </figure>
+                    <p>A dynamic dashboard built with HTML, CSS and JavaScript to track project metrics.</p>
+                    <a class="card-link" href="#" aria-label="View code for Responsive Web Dashboard">View code</a>
+                </article>
+
+                <article>
+                    <figure>
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 220'%3E%3Crect width='400' height='220' fill='%23f0f4f8'/%3E%3Crect x='60' y='30' width='280' height='40' rx='6' fill='%231a1a2e'/%3E%3Crect x='60' y='90' width='280' height='30' rx='6' fill='%23007bff' opacity='.7'/%3E%3Crect x='60' y='135' width='280' height='30' rx='6' fill='%23007bff' opacity='.5'/%3E%3Crect x='60' y='180' width='120' height='24' rx='6' fill='%23e94560'/%3E%3C/svg%3E"
+                             alt="Illustration of a to-do list application with task rows" width="400" height="220" loading="lazy">
+                        <figcaption>To-Do List App</figcaption>
+                    </figure>
+                    <p>A task manager that lets users add, complete and delete tasks.</p>
+                    <a class="card-link" href="#" aria-label="View code for To-Do List App">View code</a>
+                </article>
+
+                <article>
+                    <figure>
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 220'%3E%3Crect width='400' height='220' fill='%23e94560'/%3E%3Ccircle cx='200' cy='80' r='36' fill='%23ffffff'/%3E%3Crect x='110' y='134' width='180' height='16' rx='8' fill='%23ffffff'/%3E%3Crect x='140' y='162' width='120' height='12' rx='6' fill='%23ffffff' opacity='.7'/%3E%3C/svg%3E"
+                             alt="Illustration of a personal profile page with an avatar and text lines" width="400" height="220" loading="lazy">
+                        <figcaption>Personal Portfolio Website</figcaption>
+                    </figure>
+                    <p>This website: semantic, responsive and accessible, built from scratch.</p>
+                    <a class="card-link" href="#" aria-label="View code for Personal Portfolio Website">View code</a>
+                </article>
+
+            </div>
         </section>
 
         <!-- Skills Section -->
         <section id="skills">
             <h2>Skills</h2>
             <ul>
-                <li>HTML5 & Semantic Markup</li>
-                <li>CSS3 & Responsive Design</li>
+                <li>HTML5 &amp; Semantic Markup</li>
+                <li>CSS3 &amp; Responsive Design</li>
                 <li>JavaScript (ES6+)</li>
-                <li>Git & GitHub Version Control</li>
+                <li>Git &amp; GitHub Version Control</li>
             </ul>
         </section>
 
         <!-- Contact Section -->
         <section id="contact">
             <h2>Contact Me</h2>
-            <form action="#" method="POST">
-                <div>
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
+            <form action="#" method="POST" novalidate>
+                <div class="field">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" autocomplete="name" required aria-describedby="name-error">
+                    <span class="error" id="name-error" role="alert"></span>
                 </div>
-                <div>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
+                <div class="field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" autocomplete="email" required aria-describedby="email-error">
+                    <span class="error" id="email-error" role="alert"></span>
                 </div>
-                <div>
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" rows="4" required></textarea>
+                <div class="field">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" required aria-describedby="message-error"></textarea>
+                    <span class="error" id="message-error" role="alert"></span>
                 </div>
                 <button type="submit">Send Message</button>
+                <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
             </form>
         </section>
     </main>
@@ -76,6 +118,8 @@
     <footer>
         <p>&copy; 2026 Soumya Samarth. All rights reserved.</p>
     </footer>
+
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top" hidden>&uarr;</button>
 
     <script src="script.js"></script>
 </body>
